@@ -3,7 +3,7 @@
            xmlns:zcml="http://namespaces.zope.org/zcml">
 
   <adapter factory=".info.HttpsMonitorDataSourceInfo"
-           for=".datasources.HttpsMonitorDataSource.HttpMonitorDataSource"
+           for=".datasources.HttpsMonitorDataSource.HttpsMonitorDataSource"
            provides=".interfaces.IHttpsMonitorDataSourceInfo"
            />
   <utility provides="zope.schema.interfaces.IVocabularyFactory"
