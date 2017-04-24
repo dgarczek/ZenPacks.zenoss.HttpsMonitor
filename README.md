@@ -27,6 +27,6 @@ cd ZenPacks.zenoss.HttpsMonitor \
 python setup.py bdist_egg
 
 ZenPack Installation: \
-zenpack --install zenpack --install ZenPacks.zenoss.HttpsMonitor-1.1.0-py2.7.egg \
+zenpack --install ZenPacks.zenoss.HttpsMonitor-1.1.0-py2.7.egg \
 zopectl restart \
 zenhub restart
