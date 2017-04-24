@@ -21,12 +21,12 @@ Graph Definitions Changes: \
 Time Line Type is set to Area ( Default: Line ) \
 Size Line Type is set to Area ( Default: Line ) 
 
-Install Instructions:
-Git clone (url)
-cd ZenPacks.zenoss.HttpsMonitor
+Install Instructions: \
+Git clone (url) \
+cd ZenPacks.zenoss.HttpsMonitor \
 python setup.py bdist_egg # This will create a .egg file
 
-ZenPack Installation:
-zenpack --install zenpack --install ZenPacks.zenoss.HttpsMonitor-1.1.0-py2.7.egg
-zopectl restart
+ZenPack Installation: \
+zenpack --install zenpack --install ZenPacks.zenoss.HttpsMonitor-1.1.0-py2.7.egg \
+zopectl restart \
 zenhub restart
