@@ -18,6 +18,6 @@ Port is set to 443 ( Default: 80 ) \
 Use SSL? is checked ( Default: unchecked ) \
 Use SNI? is checked ( Default: N/A ) 
 
-Graph Definitions Changes:
+Graph Definitions Changes: \
 Time Line Type is set to Area ( Default: Line ) \
 Size Line Type is set to Area ( Default: Line ) 
