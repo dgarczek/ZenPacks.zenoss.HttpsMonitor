@@ -16,8 +16,8 @@ IP Address or Proxy Address field is left blank to force polling by Host Name ( 
 Severity is set to Criticial ( Default: Warning ) \
 Port is set to 443 ( Default: 80 ) \
 Use SSL? is checked ( Default: unchecked ) \
-Use SNI? is checked ( Default: N/A ) \
+Use SNI? is checked ( Default: N/A ) 
 
 Graph Definitions Changes:
 Time Line Type is set to Area ( Default: Line ) \
-Size Line Type is set to Area ( Default: Line ) \
+Size Line Type is set to Area ( Default: Line ) 
