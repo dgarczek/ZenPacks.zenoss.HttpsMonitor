@@ -24,7 +24,7 @@ Size Line Type is set to Area ( Default: Line )
 Install Instructions: \
 Git clone (url) \
 cd ZenPacks.zenoss.HttpsMonitor \
-python setup.py bdist_egg # This will create a .egg file
+python setup.py bdist_egg
 
 ZenPack Installation: \
 zenpack --install zenpack --install ZenPacks.zenoss.HttpsMonitor-1.1.0-py2.7.egg \
