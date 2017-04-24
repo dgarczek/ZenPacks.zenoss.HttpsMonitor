@@ -40,9 +40,6 @@ True
 <property type="string" id="hostname" mode="w" >
 ${dev/id}
 </property>
-<property type="string" id="ipAddress" mode="w" >
-${dev/manageIp}
-</property>
 <property type="int" id="port" mode="w" >
 443
 </property>
@@ -65,7 +62,7 @@ True
 follow
 </property>
 <property type="int" id="timeout" mode="w" >
-60
+30
 </property>
 <tomanycont id='datapoints'>
 <object id='size' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
