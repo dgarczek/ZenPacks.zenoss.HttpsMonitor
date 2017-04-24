@@ -3,9 +3,9 @@ HTTPS Monitor Zenpack for Zenoss Core 4.x
 
 This ZenPack is an extended version of the stock HttpMonitor and supports polling websites that require Server Name Indication (SNI). SNI is an extension to TLS that allows multiple SSL/TLS certificates on a single IP address.
 
-While the Nagios Plugin check_http supports SNI, the user cannot enable SNI within the Zenoss Dashboard.
+Although the Nagios Plugin check_http supports SNI, the user cannot enable SNI within the Zenoss Dashboard by default.
 
-We can run check_http tests on the command line. For example:
+We can run check_http tests on the command line. In the example below, we try polling a website that requires the client to specify SNI name during the SSL/TLS negotiation. Note: www.mywebsite.com is not an actual website requiring SNI.
 
 Without SNI: \
 /usr/lib64/nagios/plugins/check_http -H www.mywebsite.com --onredirect=follow --ssl \
