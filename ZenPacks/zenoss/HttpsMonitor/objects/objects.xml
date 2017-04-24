@@ -8,6 +8,9 @@ Put devices in this class to monitor them for Ping, DNS forward lookups, and bas
 <property visible="True" type="lines" id="zDeviceTemplates" >
 ['Device', 'HttpsMonitor']
 </property>
+<property visible="True" type="boolean" id="zPingMonitorIgnore" >
+True
+</property>
 <property visible="True" type="boolean" id="zSnmpMonitorIgnore" >
 True
 </property>
@@ -29,10 +32,10 @@ True
 /Status/HTTPS
 </property>
 <property type="int" id="severity" mode="w" >
-3
+5
 </property>
 <property type="int" id="cycletime" mode="w" >
-300
+150
 </property>
 <property type="string" id="hostname" mode="w" >
 ${dev/id}
@@ -41,10 +44,10 @@ ${dev/id}
 ${dev/manageIp}
 </property>
 <property type="int" id="port" mode="w" >
-80
+443
 </property>
 <property type="boolean" id="useSsl" mode="w" >
-False
+True
 </property>
 <property type="string" id="url" mode="w" >
 /
@@ -56,7 +59,7 @@ False
 False
 </property>
 <property type="boolean" id="useSni" mode="w" >
-False
+True
 </property>
 <property type="string" id="onRedirect" mode="w" >
 follow
@@ -119,7 +122,7 @@ True
 <tomanycont id='graphPoints'>
 <object id='size' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
 <property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
+AREA
 </property>
 <property type="long" id="lineWidth" mode="w" >
 1
@@ -170,7 +173,7 @@ True
 <tomanycont id='graphPoints'>
 <object id='time' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
 <property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
+AREA
 </property>
 <property type="long" id="lineWidth" mode="w" >
 1
