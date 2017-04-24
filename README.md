@@ -12,7 +12,6 @@ zPingMonitorIgnore is set to True
 
 Data Source Changes: \
 Cycle Time (seconds) is set to 150 ( Default: 300 ) \
-IP Address or Proxy Address field is left blank to force polling by Host Name ( Default: ${dev/manageIp} ) \
 Severity is set to Criticial ( Default: Warning ) \
 Port is set to 443 ( Default: 80 ) \
 Use SSL? is checked ( Default: unchecked ) \
@@ -21,3 +20,13 @@ Use SNI? is checked ( Default: N/A )
 Graph Definitions Changes: \
 Time Line Type is set to Area ( Default: Line ) \
 Size Line Type is set to Area ( Default: Line ) 
+
+Install Instructions:
+Git clone (url)
+cd ZenPacks.zenoss.HttpsMonitor
+python setup.py bdist_egg # This will create a .egg file
+
+ZenPack Installation:
+zenpack --install zenpack --install ZenPacks.zenoss.HttpsMonitor-1.1.0-py2.7.egg
+zopectl restart
+zenhub restart
