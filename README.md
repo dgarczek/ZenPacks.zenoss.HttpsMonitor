@@ -17,6 +17,8 @@ HTTP OK: HTTP/1.1 200 OK - 316717 bytes in 0.980 second response time |time=0.98
 
 This HttpsMonitor ZenPack allows the user to put a "check" next to UseSSL? and UseSNI? in the HttpsMonitor Data Source.
 
+Some changes I made to the default settings. Adjust to suit your needs.
+
 Configuration Properties Changes: \
 zPingMonitorIgnore is set to True ( Default: False)
 
