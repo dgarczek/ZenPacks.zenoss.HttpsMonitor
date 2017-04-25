@@ -13,9 +13,9 @@ CRITICAL - Cannot make SSL connection.
 
 With SNI: \
 /usr/lib64/nagios/plugins/check_http -H www.mywebsite.com --onredirect=follow --ssl --sni \
-HTTP OK: HTTP/1.1 200 OK - 316717 bytes in 0.980 second response time |time=0.980466s;;;0.000000 size=316717B;;;0 \ 
+HTTP OK: HTTP/1.1 200 OK - 316717 bytes in 0.980 second response time |time=0.980466s;;;0.000000 size=316717B;;;0 
 
-Notice the extra --sni option.\
+Notice the extra --sni option.
 
 This HttpsMonitor ZenPack allows the user to put a "check" next to UseSSL? and UseSNI? in the HttpsMonitor Data Source. Zenoss then generates the check_http command with all required options.
 
