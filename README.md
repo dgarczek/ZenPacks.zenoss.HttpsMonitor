@@ -5,7 +5,7 @@ This ZenPack is an extended version of the stock HttpMonitor and supports pollin
 
 Although the Nagios Plugin check_http supports SNI, the user cannot enable SNI within the Zenoss Dashboard by default.
 
-We can run check_http tests on the command line. In the example below, we try polling a website that requires the client to specify SNI name during the SSL/TLS negotiation. Note: www.mywebsite.com is not an actual website requiring SNI.
+We can run check_http tests on the command line to better understand the request parameters that Zenoss needs to handle in order to successfully poll websites requiring SNI. In the example below, we try polling a website that requires the client to specify an SNI name during the SSL/TLS negotiation. Note: www.mywebsite.com is not an actual website requiring SNI, just an example.
 
 Without SNI: \
 /usr/lib64/nagios/plugins/check_http -H www.mywebsite.com --onredirect=follow --ssl \
@@ -13,9 +13,11 @@ CRITICAL - Cannot make SSL connection.
 
 With SNI: \
 /usr/lib64/nagios/plugins/check_http -H www.mywebsite.com --onredirect=follow --ssl --sni \
-HTTP OK: HTTP/1.1 200 OK - 316717 bytes in 0.980 second response time |time=0.980466s;;;0.000000 size=316717B;;;0
+HTTP OK: HTTP/1.1 200 OK - 316717 bytes in 0.980 second response time |time=0.980466s;;;0.000000 size=316717B;;;0 \ 
 
-This HttpsMonitor ZenPack allows the user to put a "check" next to UseSSL? and UseSNI? in the HttpsMonitor Data Source.
+Notice the extra --sni option.\\
+
+This HttpsMonitor ZenPack allows the user to put a "check" next to UseSSL? and UseSNI? in the HttpsMonitor Data Source. Zenoss then generates the check_http command with all required options.
 
 Some changes I made to the default settings. Adjust to suit your needs.
 
